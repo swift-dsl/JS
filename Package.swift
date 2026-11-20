@@ -15,20 +15,10 @@ let package = Package(
                 "JS",
             ]
         ),
-        .executable(
-            name: "jstest",
-            targets: [
-                "JSTestFlows",
-            ]
-        ),
     ],
     dependencies: [
         .package(
             url: "https://github.com/leviouwendijk/DSL.git",
-            branch: "master"
-        ),
-        .package(
-            url: "https://github.com/leviouwendijk/TestFlows.git",
             branch: "master"
         ),
     ],
@@ -39,20 +29,6 @@ let package = Package(
                 .product(
                     name: "DSL",
                     package: "DSL"
-                ),
-            ]
-        ),
-        .executableTarget(
-            name: "JSTestFlows",
-            dependencies: [
-                "JS",
-                .product(
-                    name: "DSL",
-                    package: "DSL"
-                ),
-                .product(
-                    name: "TestFlows",
-                    package: "TestFlows"
                 ),
             ]
         ),
