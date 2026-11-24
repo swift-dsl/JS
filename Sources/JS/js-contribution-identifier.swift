@@ -2,7 +2,6 @@ public struct JSContributionIdentifier:
     Sendable,
     Hashable,
     CustomStringConvertible,
-    ExpressibleByStringLiteral,
     JSContributionIdentifying
 {
     public let rawValue:
@@ -17,11 +16,11 @@ public struct JSContributionIdentifier:
     }
 
     public init(
-        stringLiteral value:
+        rawValue:
             String
     ) {
         self.init(
-            value
+            rawValue
         )
     }
 
